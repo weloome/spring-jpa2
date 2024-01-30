@@ -13,9 +13,6 @@ public class JpaMain {
         tx.begin();
 
         try {
-            Member findMember = em.find(Member.class, 1L);
-            findMember.setName("helloJpa");
-
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
